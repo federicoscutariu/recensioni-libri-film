@@ -42,10 +42,13 @@ nav .hamburger {
 }
 
 nav .menu {
+  display: flex;
+  gap: 0;
+  padding: 0;
+  margin: 0;
   left: auto;
   right: 0;
   height: 100%;
-  gap: 0px;
 }
 
 nav .menu .menu-item,
@@ -62,6 +65,9 @@ nav .menu .menu-item,
   background: rgb(5, 74, 235);
   transition: all 0.3s ease;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav .menu .menu-item:hover,
@@ -78,7 +84,7 @@ nav .menu .menu-item:hover,
   position: absolute;
   top: -200px;
   z-index: 999;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .mobile-subnav .menu-item {
@@ -102,9 +108,9 @@ nav .menu .menu-item:hover,
 }
 
 @media only screen and (max-width: 572px) {
-    .mobile-subnav.active {
-        top: 80px !important;
-    }
+  .mobile-subnav.active {
+    top: 80px !important;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
