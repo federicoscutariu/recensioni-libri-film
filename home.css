@@ -10,10 +10,16 @@ body {
   background: rgb(18, 17, 17);
   color: white;
   font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 
+
+
+
+/* ------------------ NAVBAR ------------------ */
+
 nav {
-  background: rgb(5, 74, 235);
+  background: #054aeb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +68,7 @@ nav .menu .menu-item,
   font-family: "Inter", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  background: rgb(5, 74, 235);
+  background: #054aeb;
   transition: all 0.3s ease;
   color: white;
   display: flex;
@@ -94,6 +100,100 @@ nav .menu .menu-item:hover,
   padding-bottom: 10px;
 }
 
+.mobile-navigation {
+  background: white;
+  width: 190px;
+  height: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 30px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100px;
+  transition: all .5s ease-in-out;
+}
+
+.mobile-navigation .item {
+  border-radius: 100px;
+  background: none;
+  outline: none;
+  border: none;
+  margin: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+.mobile-navigation .item.active {
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.mobile-navigation .selection-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background: #054aeb;
+  z-index: 999;
+  position: absolute;
+  left: 10px;
+  transition: all .3s ease-in-out;
+}
+
+nav .mobile-title {
+  display: none;
+}
+
+@media only screen and (max-width: 572px) {
+  .mobile-subnav {
+    display: none;
+  }
+
+  nav .hamburger {
+    display: none !important;
+  }
+
+  .mobile-navigation {
+    display: flex;
+  }
+
+  nav .title {
+    display: none;
+  }
+
+  nav .mobile-title {
+    width: 150px;
+    word-wrap: break-word;
+    text-align: right;
+    font-size: 17px;
+    display: block;
+    position: absolute;
+    left: auto;
+    right: 10px;
+  }
+
+  nav {
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 572px) and (max-width: 600px) {
+  nav .title {
+    display: block;
+  }
+
+  nav .mobile-title {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   nav .logo {
     height: 50%;
@@ -104,12 +204,6 @@ nav .menu .menu-item:hover,
     text-align: center;
     word-wrap: break-word;
     font-size: 17px;
-  }
-}
-
-@media only screen and (max-width: 572px) {
-  .mobile-subnav.active {
-    top: 80px !important;
   }
 }
 
@@ -132,3 +226,10 @@ nav .menu .menu-item:hover,
     font-size: 20px;
   }
 }
+
+
+
+
+
+
+/* ------------------ MAIN ------------------ */
