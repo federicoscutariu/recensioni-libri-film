@@ -172,9 +172,148 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const recensioni = [
     {
-      titolo: "recensione",
-      contenuto: "bel libro",
+      titolo: "Avvincente e Inaspettato",
+      contenuto: "Un libro che ti cattura fin dalle prime pagine.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Ben Scritto",
+      contenuto: "Stile narrativo coinvolgente e ben costruito.",
+      stelle: 4,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Divertente e Leggero",
+      contenuto: "Una lettura piacevole e spensierata.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Finale Deludente",
+      contenuto: "Il libro parte bene, ma il finale lascia a desiderare.",
       stelle: 3,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Intrigante Mistero",
+      contenuto: "Un mistero che ti tiene con il fiato sospeso fino alla fine.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Troppo Lungo",
+      contenuto: "Bella storia, ma poteva essere più breve.",
+      stelle: 3,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Un Classico da Leggere",
+      contenuto: "Un classico che non può mancare nella libreria.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Storia Originale",
+      contenuto: "Una trama originale e ben sviluppata.",
+      stelle: 4,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Aspettative Tradite",
+      contenuto: "Mi aspettavo di più dopo le recensioni positive.",
+      stelle: 2,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Colpi di Scena",
+      contenuto: "Pieno di colpi di scena imprevedibili.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Lento a Ingrana",
+      contenuto: "Parte lentamente, ma migliora verso la fine.",
+      stelle: 3,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Un Capolavoro Letterario",
+      contenuto: "Una storia che rimane nel cuore a lungo.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Personaggi Memorabili",
+      contenuto: "I personaggi sono realistici e ben caratterizzati.",
+      stelle: 4,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Non Coinvolgente",
+      contenuto: "Non sono riuscito a entrare nella storia.",
+      stelle: 2,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Emozioni a Fiumi",
+      contenuto: "Un libro che emoziona e fa riflettere.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Buona Trama, Personaggi Piatti",
+      contenuto:
+        "La trama è interessante, ma i personaggi mancano di profondità.",
+      stelle: 3,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Da Rileggere",
+      contenuto: "Un libro che merita di essere riletto più volte.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Finale Frettoloso",
+      contenuto: "Tutto bello fino al finale troppo frettoloso.",
+      stelle: 3,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Adattamento di Successo",
+      contenuto: "Ottima trasposizione da un'altra opera letteraria.",
+      stelle: 4,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Suspense Continua",
+      contenuto: "Tensione costante dalla prima all'ultima pagina.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Confuso e Complesso",
+      contenuto: "Troppo complesso da seguire, trama confusa.",
+      stelle: 3,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Thriller Coinvolgente",
+      contenuto: "Un thriller che tiene incollati alle pagine.",
+      stelle: 5,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Ben Scritti i Dialoghi",
+      contenuto: "Dialoghi realistici e coinvolgenti.",
+      stelle: 4,
+      autore: "https://placehold.co/1000x1000",
+    },
+    {
+      titolo: "Troppi Stereotipi",
+      contenuto: "Trama interessante, ma troppi stereotipi sui personaggi.",
+      stelle: 2,
       autore: "https://placehold.co/1000x1000",
     },
   ];
@@ -183,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const creaLibroHTML = (libro) => {
     const index = libri.indexOf(libro);
-    const recensione = recensioni[0];
+    const recensione = recensioni[index];
     return `
       <div class="slide">
         <div class="book">
@@ -218,7 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   libri.forEach((libro) => {
     const index = libri.indexOf(libro);
-    const recensione = recensioni[0];
+    const recensione = recensioni[index];
     sliderTrack.innerHTML += creaLibroHTML(libro);
 
     const ratings = Array.from(document.querySelectorAll(".book-rating"));
