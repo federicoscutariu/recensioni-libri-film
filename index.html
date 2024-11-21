@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Club del Libro e Cineforum</title>
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="hamburger.css" />
+    <link rel="stylesheet" href="slider.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -46,6 +47,16 @@
       </label>
     </nav>
 
+    <div class="mobile-navigation">
+      <div class="selection-circle"></div>
+      <button class="item left"><i class="fa-solid fa-house fa-lg"></i></button>
+      <button class="item"><i class="fa-solid fa-book fa-lg"></i></button>
+      <button class="item"><i class="fa-solid fa-film fa-lg"></i></button>
+      <button class="item right">
+        <i class="fa-solid fa-comments fa-lg"></i>
+      </button>
+    </div>
+
     <div class="mobile-subnav">
       <button class="menu-item" onclick="redirect('#')">Home</button>
       <button class="menu-item" onclick="redirect('#')">Club del Libro</button>
@@ -54,25 +65,23 @@
     </div>
 
     <main>
-      <h1 class="title">Benvenuto!</h1>
-      <h3>Stai cercando un nuovo libro da leggere?</h3>
-      <div class="book-slideshow">
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>
+      <h1 class="title">Benvenuto/a!</h1>
+      <h3 class="subtitle">Stai cercando un nuovo libro da leggere?</h3>
+      <div class="libri slider">
+        <div class="slider-track" id="sliderTrack">
+          <!-- qua vengono aggiunti tutti i libri tramite js -->
+        </div>
       </div>
-      <h3>Oppure non sai quale film soddisfa i tuoi gusti?</h3>
+      <h3 class="subtitle">Oppure non sai quale film soddisfa i tuoi gusti?</h3>
+      <div class="film slider2">
+        <div class="slider-track-2" id="sliderTrack2">
+          <!-- qua vengono aggiunti tutti i film tramite js -->
+        </div>
+      </div>
     </main>
 
-    <div class="mobile-navigation">
-      <div class="selection-circle"></div>
-      <button class="item left"><i class="fa-solid fa-house fa-lg"></i></button>
-      <button class="item"><i class="fa-solid fa-book fa-lg"></i></button>
-      <button class="item"><i class="fa-solid fa-film fa-lg"></i></button>
-      <button class="item right"><i class="fa-solid fa-comments fa-lg"></i></button>
-    </div>
-
+    <script src="libri.js"></script>
+    <script src="film.js"></script>
     <script src="main.js"></script>
     <script src="hamburger.js"></script>
   </body>
